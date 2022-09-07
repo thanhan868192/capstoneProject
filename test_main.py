@@ -7,15 +7,15 @@ from models import setup_db
 from flask_sqlalchemy import SQLAlchemy
 
 class CapstoneTestCase(unittest.TestCase):
-    executiva_produce_token = os.getenv('EXECUTIVE_PRODUCE_TOKEN')
-    def setUp(self, executiva_produce_token = executiva_produce_token) :
+    executive_produce_token = os.getenv('EXECUTIVE_PRODUCE_TOKEN')
+    def setUp(self, executive_produce_token = executive_produce_token) :
         self.app = create_app()
         self.client = self.app.test_client
         self.database_path = os.environ['DATABASE_URL']
         if self.database_path.startswith("postgres://"):
             self.database_path = self.database_path.replace("postgres://", "postgresql://", 1)
         setup_db(self.app, self.database_path)
-        self.headers = {'Authorization': executiva_produce_token}
+        self.headers = {'Authorization': executive_produce_token}
         
         with self.app.app_context():
             self.db = SQLAlchemy()
