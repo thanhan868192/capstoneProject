@@ -26,7 +26,6 @@ def create_app(test_config=None):
     # actors handling
     
     @app.route('/actors', methods=['GET'])
-    @requires_auth('get:actors')
     def get_actors(self):
         selection = Actor.query.order_by(Actor.id).all()
         actors = [actor.format() for actor in selection]
@@ -110,7 +109,6 @@ def create_app(test_config=None):
     # movies handling
     
     @app.route('/movies', methods=['GET'])
-    @requires_auth('get:movies')
     def get_movies(self):
         selection = Movie.query.order_by(Movie.id).all()
         movies = [movie.format() for movie in selection]
