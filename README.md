@@ -1,5 +1,8 @@
 # capstoneProject
-
+  - Captone project is is responsible for creating movies and managing and assigning actors to those movies, creating a system to simplify and streamline your process.
+## Motivation
+  - I developed this project to make use of the knowledge you acquired in this nanodegree and hence gain confidence in these skills
+  - I wanted to contribute something to the open-source community by building this tool
 ### Install Dependencies
 
 1. **Python 3.7** - Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
@@ -9,7 +12,7 @@
 3. **PIP Dependencies** - Once your virtual environment is setup and running, install the required dependencies by navigating to the `/backend` directory and running:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 #### Key Pip Dependencies
 
@@ -106,6 +109,6 @@ The `--reload` flag will detect file changes and restart the server automaticall
 3. Executive Producer
     - username: executiveproducer@gmail.com
     - password: Admin@123
-    - token: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik4yUWNsenU5cDZNaGNta29zWXU4NCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRhbmx0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzE0YThmMGRlODBkODlmNzc3N2JjOGMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2MjU0MjU0MywiZXhwIjoxNjYyNTQ5NzQzLCJhenAiOiI3QlR2ZDhFNlRNVFJJbWNsRFVOUU1MdWZ2R1daNTdPayIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0OmFjdG9ycy1kZXRhaWwiLCJnZXQ6bW92aWVzIiwiZ2V0Om1vdmllcy1kZXRhaWwiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.TgxTTwK4WVkTJY-V5xnEjz5THoQznXHEEo89oo0Ub-WTF0YEkdwIsNKQX_lioTOxPkPpjzmKQ34VoaZ_2FNZs___8in_XLos2F5nbMeJaKqmpfGNzi6kYwYVkNBawHUN4Cm_rPyeF7OQGYV4O_RLdoBlmGzqcNr4wD5znxczgbgwjckiM0EjlFOv6clhYfecajFapFc6yhhui6e1JpynLcbkuNvjNMZCPeS97SWEHohmN-Y0g6m8X2--tgPoTc3QXuZD7yIOdqu6LR7SDyZ13atW20H2nrjwWOXqjsdA9-Oa6024kea0Jog6yUXv7Wfe9iKYA9JrbdDsn0Zd6QUdZw
+    - token: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik4yUWNsenU5cDZNaGNta29zWXU4NCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRhbmx0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzE0YThmMGRlODBkODlmNzc3N2JjOGMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2MjU1NTA2NiwiZXhwIjoxNjYyNTYyMjY2LCJhenAiOiI3QlR2ZDhFNlRNVFJJbWNsRFVOUU1MdWZ2R1daNTdPayIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0OmFjdG9ycy1kZXRhaWwiLCJnZXQ6bW92aWVzIiwiZ2V0Om1vdmllcy1kZXRhaWwiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.TRQEAg5gC1AWRLRbUE8B7OGSp2_oGPZbewm3sLpfmgYAuJ6s2n21mYHJVNnVb1nV42hNV28m7GSfmgxyHv6S-sfKmQ2f1_cPkC3uoXPgFwVXunx29YwydKp4SFDkhT7wDNSLJXyXdt11mX55D3UHTKjwBlXnhJ1Y0GhP_rmbQ51y4UCABFO-zkCtqeFRACDDd8JWAecaKaP9jFsI5t_CtmJ9rIBQmDwBC5a9m7AL1iG_OEMcMzTEHmC9IJiOFtcQIAptWixEP-FMAjTBorr_ZPqHazyJgj4bX587wfptN5nnB54WSqU9oZW61SZQqgcO16l8rj872UKVISINDnj01w
 ## Link deploy
 https://myapp-21012000.herokuapp.com/

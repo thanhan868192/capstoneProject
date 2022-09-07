@@ -20,6 +20,19 @@ def setup_db(app, database_path=database_path):
     db.init_app(app)
     db.create_all()
 
+class inheritedClassName(db.Model):
+    __abstract__ = True
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
 
 '''
 Person
@@ -41,7 +54,7 @@ class Person(db.Model):
       'id': self.id,
       'name': self.name,
       'catchphrase': self.catchphrase}
-class Movie(db.Model):  
+class Movie(inheritedClassName):  
   __tablename__ = 'Movie'
 
   id = Column(db.Integer, primary_key=True)
@@ -51,17 +64,6 @@ class Movie(db.Model):
   def __init__(self, title, release_date):
     self.title = title
     self.release_date = release_date
-  
-  def insert(self):
-    db.session.add(self)
-    db.session.commit()
-  
-  def update(self):
-    db.session.commit()  
-    
-  def delete(self):
-    db.session.delete(self)
-    db.session.commit()  
 
   def format(self):
     return {
@@ -69,7 +71,7 @@ class Movie(db.Model):
       'title': self.title,
       'release_date': self.release_date}
    
-class Actor(db.Model):  
+class Actor(inheritedClassName):  
   __tablename__ = 'Actor'
 
   id = Column(db.Integer, primary_key=True)
@@ -82,17 +84,6 @@ class Actor(db.Model):
     self.age = age
     self.gender = gender
   
-  def insert(self):
-    db.session.add(self)
-    db.session.commit()
-  
-  def update(self):
-    db.session.commit()  
-    
-  def delete(self):
-    db.session.delete(self)
-    db.session.commit()  
-
   def format(self):
     return {
       'id': self.id,

@@ -7,7 +7,7 @@ from models import setup_db
 from flask_sqlalchemy import SQLAlchemy
 
 class CapstoneTestCase(unittest.TestCase):
-    executive_produce_token = os.getenv('EXECUTIVE_PRODUCE_TOKEN')
+    executive_produce_token = os.environ.get('EXECUTIVE_PRODUCE_TOKEN')
     def setUp(self, executive_produce_token = executive_produce_token) :
         self.app = create_app()
         self.client = self.app.test_client

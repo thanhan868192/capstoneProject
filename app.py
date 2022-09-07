@@ -1,6 +1,7 @@
 import json
 import os
-from flask import Flask, jsonify, abort, request
+import sys
+from flask import (Flask, jsonify, abort, request)
 from auth import requires_auth
 from models import Actor, Movie, setup_db
 from flask_cors import CORS
@@ -53,9 +54,9 @@ def create_app(test_config=None):
     @requires_auth('post:actors')
     def new_actors(self):
         body = request.get_json()
-        new_name = body.get('name', None)
-        new_age = body.get('age', None)
-        new_gender = body.get('gender', None)
+        new_name = body.get('name')
+        new_age = body.get('age')
+        new_gender = body.get('gender')
         actor = Actor(name=new_name, age=new_age, gender=new_gender)
         if actor is None:
             abort(404)
@@ -70,9 +71,9 @@ def create_app(test_config=None):
     @requires_auth('patch:actors')
     def patch_actors(self, actor_id):
         body = request.get_json()
-        new_name = body.get('name', None)
-        new_age = body.get('age', None)
-        new_gender = body.get('gender', None)
+        new_name = body.get('name')
+        new_age = body.get('age')
+        new_gender = body.get('gender')
         actor = Actor.query.filter(Actor.id == actor_id).one_or_none()
         if actor is None:
             abort(404)
@@ -104,6 +105,7 @@ def create_app(test_config=None):
             "delete": actor_id
             })    
         except:    
+            print(sys.exc_info())
             abort(422)         
         
     # movies handling
@@ -136,8 +138,8 @@ def create_app(test_config=None):
     @requires_auth('post:movies')
     def new_movies(self):
         body = request.get_json()
-        new_title = body.get('title', None)
-        new_release_date = body.get('release_date', None)
+        new_title = body.get('title')
+        new_release_date = body.get('release_date')
         movie = Movie(title=new_title, release_date=new_release_date)
         if movie is None:
             abort(404)
@@ -152,8 +154,8 @@ def create_app(test_config=None):
     @requires_auth('patch:movies')
     def patch_movies(self, movie_id):
         body = request.get_json()
-        new_title = body.get('title', None)
-        new_release_date = body.get('release_date', None)
+        new_title = body.get('title')
+        new_release_date = body.get('release_date')
         movie = Movie.query.filter(Movie.id == movie_id).one_or_none()
         if movie is None:
             abort(404)
@@ -184,6 +186,7 @@ def create_app(test_config=None):
             "delete": movie_id
             })    
         except:    
+            print(sys.exc_info())
             abort(422)
         
     # Error Handling
