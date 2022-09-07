@@ -25,8 +25,8 @@ def create_app(test_config=None):
     
     # actors handling
     
-    @app.route('/actors', methods=['GET'])
-    def get_actors(self):
+    @app.route('/actors')
+    def get_actors():
         selection = Actor.query.order_by(Actor.id).all()
         actors = [actor.format() for actor in selection]
         if len(actors) == 0:
@@ -108,8 +108,8 @@ def create_app(test_config=None):
         
     # movies handling
     
-    @app.route('/movies', methods=['GET'])
-    def get_movies(self):
+    @app.route('/movies')
+    def get_movies():
         selection = Movie.query.order_by(Movie.id).all()
         movies = [movie.format() for movie in selection]
         if len(movies) == 0:
