@@ -31,7 +31,7 @@ class CapstoneTestCase(unittest.TestCase):
     # actors handling
     
     def test_get_actors_successfully(self):
-        res = self.client().get("/actors", headers=self.headers)    
+        res = self.client().get("/actors")    
         data = json.loads(res.data)
         
         self.assertEqual(res.status_code, 200)
@@ -113,7 +113,7 @@ class CapstoneTestCase(unittest.TestCase):
     # movies handling       
     
     def test_get_movies_successfully(self):
-        res = self.client().get("/movies", headers=self.headers)    
+        res = self.client().get("/movies")    
         data = json.loads(res.data)
         
         self.assertEqual(res.status_code, 200)
